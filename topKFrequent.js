@@ -15,6 +15,7 @@ var topKFrequent = function(nums, k) {
   }
   const freq = Array.from({ length: nums.length}, () => 0)
   for (const key in map) {
+    // freq array key為count, 也就是map object的value
     freq[map[key]] = (freq[map[key]] || []).concat(key);
   }
   const result = []
