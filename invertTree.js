@@ -1,6 +1,6 @@
 // binary tree
 // order: 左到右
-// 父層翻轉子層要跟著移動
+// 父層交換子層要跟著移動
 
 class TreeNode {
   constructor(value) {
