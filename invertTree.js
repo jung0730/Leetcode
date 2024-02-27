@@ -22,6 +22,7 @@ rootNode.right.left = new TreeNode(12);
 rootNode.right.right = new TreeNode(18);
 
 function invertTree(root) {
+  // finding one or more base cases
   if (root === null) {
     return null
   }
@@ -31,10 +32,13 @@ function invertTree(root) {
   root.left = root.right
   root.right = temp
 
+  // calling the same function on the left subtree
   invertTree(root.left)
+
+  // calling the same function on the right subtree
   invertTree(root.right)
 
+  // joining the results
   return root
-
 }
 console.log(invertTree(rootNode))
