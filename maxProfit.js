@@ -1,8 +1,8 @@
 // tips: sliding window
 
 var maxProfit = function(prices) {
-  let left = 0
-  let right = 1
+  let left = 0 // buy
+  let right = 1 // sell
   let max = 0
   while (right < prices.length) {
     if (prices[left] < prices[right]) {
