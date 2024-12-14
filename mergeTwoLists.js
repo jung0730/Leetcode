@@ -23,8 +23,8 @@ function createLinkedList(values) {
 
 // tips: dummy node technique
 var mergeTwoLists = function(list1, list2) {
-  let dummyNode = new ListNode()
-  let currentNode = dummyNode
+  let dummyNode = new ListNode() // 固定住新鏈表的起始位置
+  let currentNode = dummyNode // 隨著每次操作移動，用於追踪新鏈表的末端，方便添加新節點
   while (list1 && list2) { // 當不是null時跳出loop
     if (list1.val < list2.val) {
       currentNode.next = list1
