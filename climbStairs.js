@@ -31,3 +31,23 @@ var climbStairs = function(n) {
 }
 
 console.log(climbStairs(5))
+
+var climbStairs = function(n) {
+  const cache = new Array(n+1).fill(-1); // 因為index 從0開始
+  function memo(n) {
+    if (n === 1) {
+      return 1
+    }
+    if (n === 2) {
+      return 2
+    }
+    if (cache[n] !== -1) {
+      return cache[n];
+  }
+    cache[n] = memo(n - 1) + memo(n - 2);
+    return cache[n];
+  }
+  return memo(n)
+}
+
+console.log(climbStairs(5))
